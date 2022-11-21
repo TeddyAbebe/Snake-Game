@@ -113,3 +113,18 @@ function eatSelf(head, array) {
   }
   return false;
 }
+
+// GameOver
+let GameOver = false;
+
+// game over conditions
+if (
+  snakeX < 0 ||
+  snakeX > cols * blockSize ||
+  snakeY < 0 ||
+  snakeY > rows * blockSize
+) {
+  GameOver = true;
+  alert("Game Over");
+  window.location.reload();
+}
